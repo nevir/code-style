@@ -9,7 +9,7 @@ module.exports = {
     es6: true,
   },
 
-  plugins: ['typescript'],
+  plugins: ['eslint-comments', 'typescript'],
 
   // Note that we explicitly opt into each rule that we wish to enforce, and do
   // not inherit base/recommended rule sets.
@@ -296,6 +296,17 @@ module.exports = {
     // 'template-curly-spacing': enforced by Prettier
     // 'yield-star-spacing': enforced by Prettier
 
+    // https://github.com/mysticatea/eslint-plugin-eslint-comments#rules
+
+    'eslint-comments/disable-enable-pair': 'error',
+    'eslint-comments/no-aggregating-enable': 'error',
+    'eslint-comments/no-duplicate-disable': 'error',
+    'eslint-comments/no-unlimited-disable': 'error',
+    'eslint-comments/no-unused-disable': 'error',
+    'eslint-comments/no-unused-enable': 'error',
+    // 'eslint-comments/no-restricted-disable': project-specific
+    'eslint-comments/no-use': ['error', { allow: ['eslint-disable-line', 'eslint-disable-next-line'] }],
+
     // https://github.com/nzakas/eslint-plugin-typescript#supported-rules
 
     'typescript/adjacent-overload-signatures': 'error',
@@ -313,13 +324,7 @@ module.exports = {
     // 'typescript/no-namespace': desirable for class augmentation
     // 'typescript/no-parameter-properties': desirable for many cases
     'typescript/no-triple-slash-reference': 'error',
-    'typescript/no-type-alias': [
-      'error',
-      {
-        allowAliases: true,
-        allowMappedTypes: true,
-      },
-    ],
+    'typescript/no-type-alias': ['error', { allowAliases: true, allowMappedTypes: true }],
     // 'typescript/no-unused-vars': enforced by TypeScript
     // 'typescript/no-use-before-define': enforced by TypeScript
     'typescript/prefer-namespace-keyword': 'error',
