@@ -10,7 +10,7 @@ For a node project:
 ```sh
 npm install @nevir/code-style --save-dev
 # Adds peer dependencies to your project, and sets up shared configs.
-node ./node_modules/@nevir/code-style/scripts/bootstrap.js
+node ./node_modules/@nevir/code-style/.scripts/bootstrap.js
 ```
 
 That's it! It will set you up with configuration for the various style tools.

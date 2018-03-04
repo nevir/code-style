@@ -49,7 +49,7 @@ jobs:
     parallelism: 2
     steps:
       - <<: *restore
-      - run: circleci tests glob "test/*.sh" | circleci tests split --split-by=filesize | xargs /usr/bin/env
+      - run: circleci tests glob ".test/*.sh" | circleci tests split --split-by=filesize | xargs /usr/bin/env
       - <<: *store_artifacts
 
   greenkeeper:

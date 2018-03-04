@@ -12,7 +12,7 @@ setup_fixture_project() {
 
   echo_and_run cd "${TEST_DIR}"
 
-  echo_and_run cp -R "${REPO_ROOT}/test/fixture/." .
+  echo_and_run cp -R "${REPO_ROOT}/.test/fixture/." .
 
   if [[ "${runner}" == yarn ]]; then
     echo_and_run yarn add "${REPO_ROOT}" --dev
@@ -20,7 +20,7 @@ setup_fixture_project() {
     echo_and_run npm install "${REPO_ROOT}" --save-dev
   fi
 
-  echo_and_run node ./node_modules/@nevir/code-style/scripts/bootstrap.js
+  echo_and_run node ./node_modules/@nevir/code-style/.scripts/bootstrap.js
 }
 
 # Shared, because we want to test with both npm and yarn.

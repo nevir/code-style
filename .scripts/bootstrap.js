@@ -9,9 +9,9 @@ const isEqual = require('lodash.isequal');
 const { spawnSync } = require('child_process');
 
 const CODE_STYLE_ROOT = path.resolve(__dirname, '..');
-const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, 'scripts', 'template');
+const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, '.scripts', 'template');
 const CODE_STYLE_PACKAGE = JSON.parse(fs.readFileSync(path.join(CODE_STYLE_ROOT, 'package.json')));
-const CODE_STYLE_VSCODE = path.join(CODE_STYLE_ROOT, '.vscode');
+const VSCODE_TEMPLATE = path.join(TEMPLATE_ROOT, '.vscode');
 
 const PROJECT_ROOT = process.cwd();
 const PROJECT_PACKAGE_PATH = path.join(PROJECT_ROOT, 'package.json');
@@ -93,7 +93,7 @@ cpr(TEMPLATE_ROOT, PROJECT_ROOT, { overwrite: true }, (error, files) => {
 
   // Configure VS Code
   for (const config of ['extensions.json', 'settings.json']) {
-    mergeJson(path.join(PROJECT_VSCODE, config), path.join(CODE_STYLE_VSCODE, config));
+    mergeJson(path.join(PROJECT_VSCODE, config), path.join(VSCODE_TEMPLATE, config));
   }
 
   runPackager('run', 'fix-style', '.vscode/*.json');

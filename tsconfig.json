@@ -1,3 +1,4 @@
 {
-  "extends": "./node_modules/@nevir/code-style/typescript/config.json"
+  "extends": "./node_modules/@nevir/code-style/typescript/config.json",
+  "include": [".test/fixture"]
 }

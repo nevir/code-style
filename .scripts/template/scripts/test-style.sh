@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-source ./node_modules/@nevir/code-style/scripts/include/globbing.sh
+source ./node_modules/@nevir/code-style/.scripts/include/globbing.sh
 
 if [[ "${#TYPESCRIPT_FILES[@]}" != "0" || "${#FILES[@]}" == "0" ]]; then
   ./node_modules/.bin/tsc --noEmit "${TYPESCRIPT_FILES[@]}"
