@@ -1,4 +1,4 @@
-REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}" )/../.." && pwd)"
 TEST_DIR=$(mktemp -d)
 
 echo_and_run() {
@@ -12,9 +12,9 @@ setup_fixture_project() {
 
   echo_and_run cd "${TEST_DIR}"
 
-  echo_and_run cp -R "${REPO_ROOT}/test/fixture/" .
+  echo_and_run cp -R "${REPO_ROOT}/test/fixture/." .
 
-  echo_and_run cp -R "${REPO_ROOT}/examples/" .
+  echo_and_run cp -R "${REPO_ROOT}/examples/." .
 
   if [[ "${runner}" == yarn ]]; then
     echo_and_run yarn add "${REPO_ROOT}" --dev
