@@ -1,6 +1,6 @@
 ESLINT_EXTENSIONS=(js jsx mjs ts tsx)
 PRETTIER_EXTENSIONS=(js jsx mjs ts tsx json md gql css less sass scss)
-TYPESCRIPT_EXTENSIONS=(js jsx mjs ts tsx)
+TYPESCRIPT_EXTENSIONS=(ts tsx)
 
 extensions_for() {
   local extensions
