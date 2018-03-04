@@ -1,27 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-FILES=("${@}")
-if [[ "${#FILES[@]}" = "0" ]]; then
-  FILES=($(
-    find . \
-      -path './node_modules' -prune -o \
-      -not -name '\.*' \
-      -type f \( \
-        -name '*.mjs' -o \
-        -name '*.js' -o \
-        -name '*.jsx' -o \
-        -name '*.ts' -o \
-        -name '*.tsx' \
-      \) \
-      -print
-  ))
-fi
+source ./node_modules/@nevir/code-style/scripts/include/globbing.sh
 
-./node_modules/.bin/eslint "${FILES[@]}"
+./node_modules/.bin/eslint "${ESLINT_FILES[@]}"
 
 set +e
-UGLY_FILES=($(./node_modules/.bin/prettier --list-different "${FILES[@]}"))
+UGLY_FILES=($(./node_modules/.bin/prettier --list-different "${PRETTIER_FILES[@]}"))
 if [[ "${#UGLY_FILES[@]}" != "0" ]]; then
   echo
   echo -e "\033[4m\033[33mThe following files are not well formatted:\033[0m"
