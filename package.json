@@ -1,5 +1,6 @@
 {
   "name": "@nevir/code-style",
+  "private": false,
   "version": "0.1.0",
   "description": "nevir's code style",
   "license": "MIT",
