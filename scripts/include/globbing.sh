@@ -1,12 +1,15 @@
 ESLINT_EXTENSIONS=(js jsx mjs ts tsx)
 PRETTIER_EXTENSIONS=(js jsx mjs ts tsx json md gql css less sass scss)
+TYPESCRIPT_EXTENSIONS=(js jsx mjs ts tsx)
 
 extensions_for() {
   local extensions
   if [[ "$1" == "eslint" ]]; then
     extensions=("${ESLINT_EXTENSIONS[@]}")
-  else
+  elif [[ "$1" == "prettier" ]]; then
     extensions=("${PRETTIER_EXTENSIONS[@]}")
+  else
+    extensions=("${TYPESCRIPT_EXTENSIONS[@]}")
   fi
 
   for ext in "${extensions[@]}"; do
@@ -39,4 +42,5 @@ if [[ "${#FILES[@]}" = "0" ]]; then
 else
   ESLINT_FILES=($(filter_extensions_for eslint "${FILES[@]}"))
   PRETTIER_FILES=($(filter_extensions_for prettier "${FILES[@]}"))
+  TYPESCRIPT_FILES=($(filter_extensions_for typescript "${FILES[@]}"))
 fi
