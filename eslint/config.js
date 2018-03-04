@@ -5,6 +5,10 @@ module.exports = {
     sourceType: 'module',
     jsx: true,
   },
+  env: {
+    es6: true,
+  },
+
   plugins: ['typescript'],
 
   // Note that we explicitly opt into each rule that we wish to enforce, and do
@@ -52,5 +56,38 @@ module.exports = {
     'use-isnan': 'error',
     // 'valid-jsdoc': prefer TypeScript types
     // 'valid-typeof': enforced by TypeScript
+
+    // https://eslint.org/docs/rules/#ecmascript-6
+
+    // 'arrow-body-style': enforced by Prettier
+    // 'arrow-parens': enforced by Prettier
+    // 'arrow-spacing': enforced by Prettier
+    // 'constructor-super': enforced by TypeScript
+    // 'generator-star-spacing': enforced by Prettier
+    // 'no-class-assign': enforced by TypeScript
+    // 'no-confusing-arrow': enforced by Prettier
+    // 'no-const-assign': enforced by TypeScript
+    // 'no-dupe-class-members': enforced by TypeScript
+    'no-duplicate-imports': 'error',
+    // 'no-new-symbol': enforced by TypeScript
+    // 'no-this-before-super': enforced by TypeScript
+    'no-useless-computed-key': 'error',
+    'no-useless-constructor': 'error',
+    'no-useless-rename': 'error',
+    'no-var': 'error',
+    'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
+    'prefer-arrow-callback': 'error',
+    'prefer-const': 'error',
+    'prefer-destructuring': ['error', { object: true }],
+    'prefer-numeric-literals': 'error',
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'prefer-template': 'error',
+    // 'require-yield': enforced by TypeScript
+    // 'rest-spread-spacing': enforced by Prettier
+    // 'sort-imports': TODO: eslint-plugin-import
+    'symbol-description': 'error',
+    // 'template-curly-spacing': enforced by Prettier
+    // 'yield-star-spacing': enforced by Prettier
   },
 };
