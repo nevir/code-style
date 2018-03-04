@@ -130,6 +130,25 @@ module.exports = {
     // 'wrap-iife': enforced by Prettier
     yoda: 'error',
 
+    // https://eslint.org/docs/rules/#strict-mode
+
+    // strict: enforced by whatever compiler you're using
+
+    // https://eslint.org/docs/rules/#variables
+
+    // 'init-declarations': desirable in many cases
+    'no-catch-shadow': 'error',
+    // 'no-delete-var': enforced by TypeScript
+    'no-label-var': 'error',
+    // 'no-restricted-globals': project-specific
+    'no-shadow': ['error', { builtinGlobals: true }],
+    // 'no-shadow-restricted-names': enforced by 'no-shadow'
+    // 'no-undef': enforced by TypeScript
+    // 'no-undef-init': desirable in many cases
+    // 'no-undefined': enforced by TypeScript
+    // 'no-unused-vars': enforced by TypeScript
+    // 'no-use-before-define': enforced by TypeScript
+
     // https://eslint.org/docs/rules/#ecmascript-6
 
     // 'arrow-body-style': enforced by Prettier
