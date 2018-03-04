@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "cpr": "^3.0.1",
+    "lodash.isequal": "^4.5.0",
+    "lodash.mergewith": "^4.6.1",
+    "lodash.uniqwith": "^4.5.0",
     "sort-package-json": "^1.11.0"
   },
   "devDependencies": {
