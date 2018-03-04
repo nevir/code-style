@@ -30,3 +30,7 @@ This package configures eslint with…
 * …support for TypeScript sources.
 
 * …`--fix` rules that play nice with Prettier.
+
+### TypeScript
+
+TypeScript will be set up with a relatively strict configuration.
