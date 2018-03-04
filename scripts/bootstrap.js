@@ -8,8 +8,8 @@ const uniqWith = require('lodash.uniqwith');
 const isEqual = require('lodash.isequal');
 const { spawnSync } = require('child_process');
 
-const CODE_STYLE_ROOT = __dirname;
-const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, 'template');
+const CODE_STYLE_ROOT = path.resolve(__dirname, '..');
+const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, 'scripts', 'template');
 const CODE_STYLE_PACKAGE = JSON.parse(fs.readFileSync(path.join(CODE_STYLE_ROOT, 'package.json')));
 const CODE_STYLE_VSCODE = path.join(CODE_STYLE_ROOT, '.vscode');
 
@@ -68,7 +68,7 @@ if (!packageInfo.scripts) {
 
 packageInfo.devDependencies = Object.assign(
   packageInfo.devDependencies || {},
-  CODE_STYLE_PACKAGE.peerDependencies
+  CODE_STYLE_PACKAGE.peerDependencies,
 );
 
 // Copy template files
