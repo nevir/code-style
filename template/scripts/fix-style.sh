@@ -5,7 +5,7 @@ FILES=("${@}")
 if [[ "${#FILES[@]}" = "0" ]]; then
   FILES=($(
     find . \
-      -path './node_modules' -prune -o \
+      -path '*/node_modules' -prune -o \
       -not -name '\.*' \
       -type f \( \
         -name '*.mjs' -o \
