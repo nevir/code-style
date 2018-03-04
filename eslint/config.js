@@ -20,7 +20,7 @@ module.exports = {
 
     'for-direction': 'error',
     // 'getter-return': enforced by TypeScript
-    // 'no-await-in-loop': legitimately useful
+    // 'no-await-in-loop': desirable for workflows
     'no-compare-neg-zero': 'error',
     'no-cond-assign': 'error',
     'no-console': 'error',
