@@ -6,7 +6,14 @@
   "author": "Ian MacLeod <ian@nevir.net>",
   "main": "index.js",
   "repository": "https://github.com/nevir/code-style",
-  "files": [".scripts/bootstrap.js", ".scripts/templates", "eslint", "prettier", "typescript"],
+  "files": [
+    ".scripts/bootstrap.js",
+    ".scripts/include",
+    ".scripts/templates",
+    "eslint",
+    "prettier",
+    "typescript"
+  ],
   "scripts": {
     "fix-style": "./.scripts/templates/bootstrap/scripts/fix-style.sh",
     "prepare": "./.scripts/prepare.sh",
