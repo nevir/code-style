@@ -1,0 +1,16 @@
+{
+  "name": "@nevir/code-style",
+  "version": "1.0.0",
+  "description": "nevir's code style",
+  "main": "index.js",
+  "repository": "https://github.com/nevir/code-style",
+  "author": "Ian MacLeod <ian@nevir.net>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^4.18.2"
+  },
+  "dependencies": {
+    "cpr": "^3.0.1",
+    "sort-package-json": "^1.11.0"
+  }
+}

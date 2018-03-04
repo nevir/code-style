@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+const cpr = require('cpr');
+const fs = require('fs');
+const path = require('path');
+const sortPackageJson = require('sort-package-json');
+const { spawn } = require('child_process');
+
+const CODE_STYLE_ROOT = __dirname;
+const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, 'template');
+const CODE_STYLE_PACKAGE = JSON.parse(fs.readFileSync(path.join(CODE_STYLE_ROOT, 'package.json')));
+
+const PROJECT_ROOT = process.cwd();
+const PROJECT_PACKAGE_PATH = path.join(PROJECT_ROOT, 'package.json');
+const PROJECT_SCRIPTS = path.join(PROJECT_ROOT, 'scripts');
+
+let packageInfo;
+try {
+  packageInfo = JSON.parse(fs.readFileSync(PROJECT_PACKAGE_PATH));
+} catch (error) {
+  console.error(`Expected ${PROJECT_PACKAGE_PATH} to exist and be a valid JSON file:`, error.message);
+  console.error(`Are you running bootstrap from the wrong directory?`);
+  process.exit(1);
+}
+
+if (!packageInfo.scripts) {
+  packageInfo.scripts = {};
+}
+
+packageInfo.devDependencies = Object.assign(packageInfo.devDependencies || {}, CODE_STYLE_PACKAGE.peerDependencies);
+
+cpr(TEMPLATE_ROOT, PROJECT_ROOT, { overwrite: true }, (error, files) => {
+  if (error) {
+    console.error(`Failed to copy templates to your project:`, error.message);
+    process.exit(1);
+  }
+
+  for (const file of files) {
+    if (file.startsWith(PROJECT_SCRIPTS + path.sep)) {
+      const fileName = path.basename(file);
+      const scriptName = path.basename(file, path.extname(file));
+      packageInfo.scripts[scriptName] = `./scripts/${fileName}`;
+    }
+  }
+
+  fs.writeFileSync(PROJECT_PACKAGE_PATH, JSON.stringify(sortPackageJson(packageInfo), null, 2));
+
+  if (fs.existsSync(path.join(PROJECT_ROOT, 'yarn.lock'))) {
+    spawn('yarn', ['install'], { stdio: 'inherit' });
+  } else {
+    spawn('npm', ['install'], { stdio: 'inherit' });
+  }
+});
