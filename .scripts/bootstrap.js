@@ -73,6 +73,8 @@ packageInfo.devDependencies = Object.assign(
 
 // Copy template files
 cpr(TEMPLATE_ROOT, PROJECT_ROOT, { overwrite: true }, (error, files) => {
+  console.log('Copied configuration:', files);
+
   if (error) {
     console.error(`Failed to copy templates to your project:`, error.message);
     process.exit(1);
