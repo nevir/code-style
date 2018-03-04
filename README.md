@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/npm/v/@nevir/code-style.svg)](https://www.npmjs.com/package/@nevir/code-style)
+[![Build Status](https://img.shields.io/circleci/project/github/nevir/code-style/master.svg)](https://circleci.com/gh/nevir/workflows/code-style)
+
 # [nevir](https://github.com/nevir)'s code style
 
 ## Using It In Your Own Project
