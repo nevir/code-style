@@ -3,8 +3,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
-    jsx: true
+    jsx: true,
   },
   plugins: ['typescript'],
-
 };

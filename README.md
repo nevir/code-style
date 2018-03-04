@@ -10,13 +10,13 @@ npm install @nevir/code-style --save-dev
 ./node_modules/@nevir/code-style/bootstrap
 ```
 
-That's it!  It will set you up with configuration for the various style tools
+That's it! It will set you up with configuration for the various style tools
 
 ## What You Get
 
 ### Prettier
 
-Pretty standard configuration for Prettier.  Nothing much special here.
+Pretty standard configuration for Prettier. Nothing much special here.
 
 ### Eslint
 
