@@ -1,0 +1,7 @@
+{
+  "name": "@nevir/code-style-test",
+  "description": "Test for @nevir/code-style",
+  "repository": "https://github.com/nevir/code-style",
+  "version": "1.0.0",
+  "license": "MIT"
+}
