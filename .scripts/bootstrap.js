@@ -9,9 +9,9 @@ const isEqual = require('lodash.isequal');
 const { spawnSync } = require('child_process');
 
 const CODE_STYLE_ROOT = path.resolve(__dirname, '..');
-const TEMPLATE_ROOT = path.join(CODE_STYLE_ROOT, '.scripts', 'template');
+const BOOTSTRAP_TEMPLATE = path.join(CODE_STYLE_ROOT, '.scripts', 'templates', 'bootstrap');
+const VSCODE_TEMPLATE = path.join(CODE_STYLE_ROOT, '.scripts', 'templates', '.vscode');
 const CODE_STYLE_PACKAGE = JSON.parse(fs.readFileSync(path.join(CODE_STYLE_ROOT, 'package.json')));
-const VSCODE_TEMPLATE = path.join(TEMPLATE_ROOT, '.vscode');
 
 const PROJECT_ROOT = process.cwd();
 const PROJECT_PACKAGE_PATH = path.join(PROJECT_ROOT, 'package.json');
@@ -72,9 +72,7 @@ packageInfo.devDependencies = Object.assign(
 );
 
 // Copy template files
-cpr(TEMPLATE_ROOT, PROJECT_ROOT, { overwrite: true }, (error, files) => {
-  console.log('Copied configuration:', files);
-
+cpr(BOOTSTRAP_TEMPLATE, PROJECT_ROOT, { overwrite: true }, (error, files) => {
   if (error) {
     console.error(`Failed to copy templates to your project:`, error.message);
     process.exit(1);

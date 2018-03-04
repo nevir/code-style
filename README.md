@@ -3,8 +3,6 @@
 
 # [nevir](https://github.com/nevir)'s code style
 
-## What You Get
-
 This code style currently only supports JavaScript based projects (with an emphasis on TypeScript projects). It provides a pretty comprehensive set of rules, with an aim to…
 
 * …avoid dangerous and/or confusing patterns.

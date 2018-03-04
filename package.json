@@ -6,14 +6,14 @@
   "author": "Ian MacLeod <ian@nevir.net>",
   "main": "index.js",
   "repository": "https://github.com/nevir/code-style",
-  "files": [".scripts/bootstrap.js", ".scripts/template", "eslint", "prettier", "typescript"],
+  "files": [".scripts/bootstrap.js", ".scripts/templates", "eslint", "prettier", "typescript"],
   "scripts": {
-    "fix-style": "./.scripts/template/scripts/fix-style.sh",
+    "fix-style": "./.scripts/templates/bootstrap/scripts/fix-style.sh",
     "prepare": "./.scripts/prepare.sh",
     "release": "./.scripts/release.sh",
     "test": "./.scripts/test.sh",
     "test-integration": "./.scripts/test-integration.sh",
-    "test-style": "./.scripts/template/scripts/test-style.sh"
+    "test-style": "./.scripts/templates/bootstrap/scripts/test-style.sh"
   },
   "dependencies": {
     "cpr": "^3.0.1",
