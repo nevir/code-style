@@ -38,7 +38,7 @@ function mergeJson(destPath, sourcePath) {
 
   mergeWith(destData, sourceData, mergeUniqueArrayValues);
 
-  fs.writeFileSync(destPath, JSON.stringify(destData, null, 2) + '\n');
+  fs.writeFileSync(destPath, `${JSON.stringify(destData, null, 2)}\n`);
 }
 
 function runPackager(...args) {
@@ -88,7 +88,7 @@ cpr(BOOTSTRAP_TEMPLATE, PROJECT_ROOT, { overwrite: true }, (error, files) => {
   }
 
   // Write package.json & install missing dependencies
-  fs.writeFileSync(PROJECT_PACKAGE_PATH, JSON.stringify(sortPackageJson(packageInfo), null, 2) + '\n');
+  fs.writeFileSync(PROJECT_PACKAGE_PATH, `${JSON.stringify(sortPackageJson(packageInfo), null, 2)}\n`);
   runPackager('install');
 
   // Configure VS Code
