@@ -57,6 +57,79 @@ module.exports = {
     // 'valid-jsdoc': prefer TypeScript types
     // 'valid-typeof': enforced by TypeScript
 
+    // https://eslint.org/docs/rules/#best-practices
+
+    // 'accessor-pairs': desirable for ergonomic APIs
+    // 'array-callback-return': enforced by TypeScript
+    // 'block-scoped-var': enforced by 'no-var'
+    'class-methods-use-this': 'error',
+    // 'complexity': not nuanced enough for global use
+    // 'consistent-return': enforced by TypeScript
+    curly: ['error', 'multi-line'],
+    // 'default-case': desirable in some cases
+    // 'dot-location': enforced by Prettier
+    // 'dot-notation': desirable when calling out special properties
+    // 'eqeqeq': enforced by TypeScript
+    'guard-for-in': 'error',
+    'no-alert': 'error',
+    'no-caller': 'error', // Weirdly not enforced by TypeScript
+    // 'no-case-declarations': enforced by TypeScript
+    // 'no-div-regex': not that confusing
+    // 'no-else-return': desirable for balanced condition style
+    // 'no-empty-function': Prettier calls them out well
+    'no-empty-pattern': 'error',
+    // 'no-eq-null': enforced by TypeScript
+    'no-eval': 'error',
+    // 'no-extend-native': enforced by TypeScript
+    'no-extra-bind': 'error',
+    // 'no-extra-label': enforced by 'no-labels'
+    'no-fallthrough': 'error',
+    // 'no-floating-decimal': enforced by Prettier
+    // 'no-global-assign': enforced by TypeScript
+    // 'no-implicit-coercion': the shorthands are desirable
+    'no-implicit-globals': 'error',
+    'no-implied-eval': 'error',
+    // 'no-invalid-this': enforced by TypeScript
+    'no-iterator': 'error',
+    'no-labels': ['error', { allowLoop: true }],
+    'no-lone-blocks': 'error',
+    // 'no-loop-func': desirable in code generation cases
+    // 'no-magic-numbers': not nuanced enough for global use
+    // 'no-multi-spaces': enforced by Prettier
+    'no-multi-str': 'error',
+    'no-new': 'error',
+    'no-new-func': 'error',
+    'no-new-wrappers': 'error',
+    // 'no-octal': enforced by TypeScript
+    'no-octal-escape': 'error',
+    // 'no-param-reassign': desirable for advanced default setting
+    // 'no-proto': enforced by TypeScript
+    // 'no-redeclare': enforced by TypeScript
+    // 'no-restricted-properties': project-specific
+    'no-return-assign': ['error', 'always'],
+    'no-return-await': 'error',
+    'no-script-url': 'error',
+    'no-self-assign': 'error',
+    'no-self-compare': 'error',
+    'no-sequences': 'error',
+    'no-throw-literal': 'error',
+    'no-unmodified-loop-condition': 'error',
+    'no-unused-expressions': 'error',
+    // 'no-unused-labels': enforced by TypeScript
+    'no-useless-call': 'error',
+    'no-useless-concat': 'error',
+    'no-useless-escape': 'error',
+    'no-useless-return': 'error',
+    'no-void': 'error',
+    // 'no-warning-comments': desirable for lightweight issue tracking
+    // 'no-with': enforced by TypeScript
+    'prefer-promise-reject-errors': 'error',
+    // 'radix': Not necessary as of ES5+
+    // 'require-await': desirable for consistent APIs
+    // 'vars-on-top': undesirable due to poor grouping of concerns
+    // 'wrap-iife': enforced by Prettier
+    yoda: 'error',
+
     // https://eslint.org/docs/rules/#ecmascript-6
 
     // 'arrow-body-style': enforced by Prettier
