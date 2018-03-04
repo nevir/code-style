@@ -42,7 +42,7 @@ cpr(TEMPLATE_ROOT, PROJECT_ROOT, { overwrite: true }, (error, files) => {
     }
   }
 
-  fs.writeFileSync(PROJECT_PACKAGE_PATH, JSON.stringify(sortPackageJson(packageInfo), null, 2));
+  fs.writeFileSync(PROJECT_PACKAGE_PATH, JSON.stringify(sortPackageJson(packageInfo), null, 2) + '\n');
 
   if (fs.existsSync(path.join(PROJECT_ROOT, 'yarn.lock'))) {
     spawn('yarn', ['install'], { stdio: 'inherit' });

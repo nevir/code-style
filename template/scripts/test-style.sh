@@ -9,7 +9,13 @@ fi
 
 if [[ "${#PRETTIER_FILES[@]}" != "0" ]]; then
   set +e
-  UGLY_FILES=($(./node_modules/.bin/prettier --list-different "${PRETTIER_FILES[@]}"))
+  UGLY_FILES=($(
+    ./node_modules/.bin/prettier \
+      --list-different \
+      --ignore
+      "${PRETTIER_FILES[@]}"
+  ))
+  set -e
   if [[ "${#UGLY_FILES[@]}" != "0" ]]; then
     echo
     echo -e "\033[4m\033[33mThe following files are not well formatted:\033[0m"
