@@ -16,10 +16,6 @@ setup_fixture_project() {
 
   echo_and_run cp -R "${REPO_ROOT}/examples/" .
 
-  echo_and_run git init
-  echo_and_run git add .
-  echo_and_run git commit -qm "Initial Commit"
-
   if [[ "${runner}" == yarn ]]; then
     echo_and_run yarn add "${REPO_ROOT}" --dev
   else
@@ -27,9 +23,6 @@ setup_fixture_project() {
   fi
 
   echo_and_run ./node_modules/@nevir/code-style/bootstrap
-
-  echo_and_run git add .
-  echo_and_run git commit -qm "@nevir/code-style bootstrap"
 }
 
 # Shared, because we want to test with both npm and yarn.
