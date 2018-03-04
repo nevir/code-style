@@ -295,5 +295,34 @@ module.exports = {
     'symbol-description': 'error',
     // 'template-curly-spacing': enforced by Prettier
     // 'yield-star-spacing': enforced by Prettier
+
+    // https://github.com/nzakas/eslint-plugin-typescript#supported-rules
+
+    'typescript/adjacent-overload-signatures': 'error',
+    'typescript/class-name-casing': 'error',
+    // 'typescript/explicit-function-return-type': desirable for helper methods
+    // 'typescript/explicit-member-accessibility': too verbose
+    'typescript/interface-name-prefix': ['error', 'never'],
+    // 'typescript/member-delimiter-style': enforced by Prettier
+    'typescript/member-naming': ['error', { private: '^_' }],
+    // 'typescript/member-ordering': not nuanced enough for global use
+    'typescript/no-angle-bracket-type-assertion': 'error',
+    // 'typescript/no-array-constructor': enforced by 'no-array-constructor'
+    // 'typescript/no-empty-interface': desirable for identifying shapes
+    // 'typescript/no-explicit-any': desirable in some cases
+    // 'typescript/no-namespace': desirable for class augmentation
+    // 'typescript/no-parameter-properties': desirable for many cases
+    'typescript/no-triple-slash-reference': 'error',
+    'typescript/no-type-alias': [
+      'error',
+      {
+        allowAliases: true,
+        allowMappedTypes: true,
+      },
+    ],
+    // 'typescript/no-unused-vars': enforced by TypeScript
+    // 'typescript/no-use-before-define': enforced by TypeScript
+    'typescript/prefer-namespace-keyword': 'error',
+    // 'typescript/type-annotation-spacing': enforced by Prettier
   },
 };
