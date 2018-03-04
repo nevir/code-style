@@ -1,2 +1,2 @@
 extends:
-- ./eslint/config.js
+- ./node_modules/@nevir/code-style/eslint/config.js
