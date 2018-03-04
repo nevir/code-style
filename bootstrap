@@ -68,7 +68,7 @@ if (!packageInfo.scripts) {
 
 packageInfo.devDependencies = Object.assign(
   packageInfo.devDependencies || {},
-  CODE_STYLE_PACKAGE.peerDependencies,
+  CODE_STYLE_PACKAGE.peerDependencies
 );
 
 // Copy template files
