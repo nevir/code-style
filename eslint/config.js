@@ -151,7 +151,7 @@ module.exports = {
 
     // https://eslint.org/docs/rules/#nodejs-and-commonjs
 
-    // 'callback-return': not enough nuance to work globally
+    // 'callback-return': not nuanced enough for global use
     'global-require': 'error',
     'handle-callback-err': ['error', '^(err|error|.+[eE]rror)$'],
     'no-buffer-constructor': 'error',
@@ -162,6 +162,106 @@ module.exports = {
     // 'no-process-exit': project-specific
     // 'no-restricted-modules': project-specific
     // 'no-sync': project-specific
+
+    // https://eslint.org/docs/rules/#stylistic-issues
+
+    // 'array-bracket-newline': enforced by Prettier
+    // 'array-bracket-spacing': enforced by Prettier
+    // 'array-element-newline': enforced by Prettier
+    // 'block-spacing': enforced by Prettier
+    // 'brace-style': enforced by Prettier
+    camelcase: 'error',
+    // 'capitalized-comments': not nuanced enough for global use
+    // 'comma-dangle': enforced by Prettier
+    // 'comma-spacing': enforced by Prettier
+    // 'comma-style': enforced by Prettier
+    // 'computed-property-spacing': enforced by Prettier
+    // 'consistent-this': not important due to arrow functions
+    // 'eol-last': enforced by Prettier
+    // 'func-call-spacing': enforced by Prettier
+    'func-name-matching': 'error',
+    // 'func-names': not desirable due to unit testing library patterns
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+    // 'function-paren-newline': enforced by Prettier
+    'id-blacklist': ['error', 'e', 'err', 'cb'],
+    // 'id-length': project-specific
+    // 'id-match': project-specific
+    // 'implicit-arrow-linebreak': enforced by Prettier
+    // indent: enforced by Prettier
+    // 'jsx-quotes': enforced by Prettier; https://github.com/prettier/prettier/pull/3839
+    // 'key-spacing': enforced by Prettier
+    // 'keyword-spacing': enforced by Prettier
+    // 'line-comment-position': both styles are desirable
+    // 'linebreak-style': enforced by Prettier
+    // 'lines-around-comment': not nuanced enough for global use
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+    // 'max-depth': not nuanced enough for global use
+    'max-len': ['error', { code: 110, comments: 80, ignoreUrls: true }],
+    // 'max-lines': not nuanced enough for global use
+    // 'max-nested-callbacks': not nuanced enough for global use
+    // 'max-params': not nuanced enough for global use
+    // 'max-statements': not nuanced enough for global use
+    // 'max-statements-per-line': not nuanced enough for global use
+    'multiline-comment-style': ['error', 'separate-lines'],
+    // 'multiline-ternary': enforced by Prettier
+    'new-cap': 'error',
+    // 'new-parens': enforced by Prettier
+    // 'newline-per-chained-call': enforced by Prettier
+    'no-array-constructor': 'error',
+    // 'no-bitwise': enforced by TypeScript
+    // 'no-continue': desirable in many cases
+    // 'no-inline-comments': desirable in many cases
+    'no-lonely-if': 'error',
+    // 'no-mixed-operators': enforced by Prettier
+    // 'no-mixed-spaces-and-tabs': enforced by Prettier
+    'no-multi-assign': 'error',
+    // 'no-multiple-empty-lines': enforced by Prettier
+    // 'no-negated-condition': not nuanced enough for global use
+    // 'no-nested-ternary': desirable in many cases
+    'no-new-object': 'error',
+    // 'no-plusplus': desirable in many cases
+    // 'no-restricted-syntax': project-specific
+    // 'no-tabs': enforced by Prettier
+    // 'no-ternary': desirable in many cases
+    // 'no-trailing-spaces': enforced by Prettier
+    // 'no-underscore-dangle': desirable for whitelisting unused names
+    'no-unneeded-ternary': 'error',
+    // 'no-whitespace-before-property': enforced by Prettier
+    // 'nonblock-statement-body-position': enforced by Prettier
+    // 'object-curly-newline': enforced by Prettier
+    // 'object-curly-spacing': enforced by Prettier
+    // 'object-property-newline': enforced by Prettier
+    'one-var': ['error', 'never'],
+    // 'one-var-declaration-per-line': enforced by 'one-var'
+    'operator-assignment': 'error',
+    // 'operator-linebreak': enforced by Prettier
+    // 'padded-blocks': enforced by Prettier
+    // 'padding-line-between-statements': not nuanced enough for global use
+    // 'quote-props': enforced by Prettier
+    // quotes: enforced by Prettier
+    // 'require-jsdoc': enforced by TypeScript
+    // semi: enforced by Prettier
+    // 'semi-spacing': enforced by Prettier
+    // 'semi-style': enforced by Prettier
+    // 'sort-keys': not nuanced enough for global use
+    // 'sort-vars': not nuanced enough for global use
+    // 'space-before-blocks': enforced by Prettier
+    // 'space-before-function-paren': enforced by Prettier
+    // 'space-in-parens': enforced by Prettier
+    // 'space-infix-ops': enforced by Prettier
+    // 'space-unary-ops': enforced by Prettier
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: { exceptions: ['/', '-', '='] },
+        block: { exceptions: ['*'], balanced: true },
+      },
+    ],
+    // 'switch-colon-spacing': enforced by Prettier
+    // 'template-tag-spacing': enforced by Prettier
+    // 'unicode-bom': enforced by Prettier
+    // 'wrap-regex': enforced by Prettier
 
     // https://eslint.org/docs/rules/#ecmascript-6
 
