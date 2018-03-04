@@ -30,12 +30,13 @@
     "sort-package-json": "^1.11.0"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
+    "eslint-plugin-eslint-comments": "^2.0.2",
     "eslint-plugin-typescript": "^0.9.0",
+    "eslint": "^4.18.2",
     "greenkeeper-lockfile": "nevir/greenkeeper-lockfile#3f3caa1",
     "prettier": "^1.11.1",
-    "typescript": "^2.7.2",
-    "typescript-eslint-parser": "^14.0.0"
+    "typescript-eslint-parser": "^14.0.0",
+    "typescript": "^2.7.2"
   },
   "peerDependencies": {
     "eslint": "^4.18.0",
