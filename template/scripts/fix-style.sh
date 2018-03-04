@@ -3,5 +3,10 @@ set -e
 
 source ./node_modules/@nevir/code-style/scripts/include/globbing.sh
 
-./node_modules/.bin/prettier --write "${PRETTIER_FILES[@]}"
-./node_modules/.bin/eslint --fix "${ESLINT_FILES[@]}"
+if [[ "${#PRETTIER_FILES[@]}" != "0" ]]; then
+  ./node_modules/.bin/prettier --write "${PRETTIER_FILES[@]}"
+fi
+
+if [[ "${#ESLINT_FILES[@]}" != "0" ]]; then
+  ./node_modules/.bin/eslint --fix "${ESLINT_FILES[@]}"
+fi
