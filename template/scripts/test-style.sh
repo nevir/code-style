@@ -10,10 +10,7 @@ fi
 if [[ "${#PRETTIER_FILES[@]}" != "0" ]]; then
   set +e
   UGLY_FILES=($(
-    ./node_modules/.bin/prettier \
-      --list-different \
-      --ignore
-      "${PRETTIER_FILES[@]}"
+    ./node_modules/.bin/prettier --list-different "${PRETTIER_FILES[@]}"
   ))
   set -e
   if [[ "${#UGLY_FILES[@]}" != "0" ]]; then
