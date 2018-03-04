@@ -1,5 +1,7 @@
 # [nevir](https://github.com/nevir)'s code style
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nevir/code-style.svg)](https://greenkeeper.io/)
+
 ## Using It In Your Own Project
 
 For a node project:
