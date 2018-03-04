@@ -46,9 +46,10 @@ jobs:
 
   test-integration:
     <<: *job_common
+    parallelism: 2
     steps:
       - <<: *restore
-      - run: yarn run test-integration
+      - run: circleci tests glob "test/*.sh" | circleci tests split --split-by=filesize | xargs /usr/bin/env
       - <<: *store_artifacts
 
   greenkeeper:
