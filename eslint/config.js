@@ -149,6 +149,20 @@ module.exports = {
     // 'no-unused-vars': enforced by TypeScript
     // 'no-use-before-define': enforced by TypeScript
 
+    // https://eslint.org/docs/rules/#nodejs-and-commonjs
+
+    // 'callback-return': not enough nuance to work globally
+    'global-require': 'error',
+    'handle-callback-err': ['error', '^(err|error|.+[eE]rror)$'],
+    'no-buffer-constructor': 'error',
+    // 'no-mixed-requires': desirable for modules with side effects
+    'no-new-require': 'error',
+    'no-path-concat': 'error',
+    // 'no-process-env': project-specific
+    // 'no-process-exit': project-specific
+    // 'no-restricted-modules': project-specific
+    // 'no-sync': project-specific
+
     // https://eslint.org/docs/rules/#ecmascript-6
 
     // 'arrow-body-style': enforced by Prettier
