@@ -1,2 +1,5 @@
 extends:
 - ./node_modules/@nevir/code-style/eslint/config.js
+
+rules:
+  no-console: off
