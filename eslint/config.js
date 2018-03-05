@@ -242,8 +242,8 @@ module.exports = {
     // 'object-curly-newline': enforced by Prettier
     // 'object-curly-spacing': enforced by Prettier
     // 'object-property-newline': enforced by Prettier
-    'one-var': ['error', 'never'],
-    // 'one-var-declaration-per-line': enforced by 'one-var'
+    // 'one-var': not nuanced enough for global use
+    // 'one-var-declaration-per-line': not nuanced enough for global use
     'operator-assignment': 'error',
     // 'operator-linebreak': enforced by Prettier
     // 'padded-blocks': enforced by Prettier
