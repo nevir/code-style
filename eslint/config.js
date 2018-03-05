@@ -9,7 +9,18 @@ module.exports = {
     es6: true,
   },
 
-  plugins: ['eslint-comments', 'typescript'],
+  plugins: ['eslint-comments', 'import', 'typescript'],
+
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx'],
+      },
+    },
+    'import/parsers': {
+      'typescript-eslint-parser': ['.ts', '.tsx'],
+    },
+  },
 
   // Note that we explicitly opt into each rule that we wish to enforce, and do
   // not inherit base/recommended rule sets.
@@ -274,7 +285,7 @@ module.exports = {
     // 'no-confusing-arrow': enforced by Prettier
     // 'no-const-assign': enforced by TypeScript
     // 'no-dupe-class-members': enforced by TypeScript
-    'no-duplicate-imports': 'error',
+    // 'no-duplicate-imports': enforced by 'import/no-duplicates'
     // 'no-new-symbol': enforced by TypeScript
     // 'no-this-before-super': enforced by TypeScript
     'no-useless-computed-key': 'error',
@@ -306,6 +317,65 @@ module.exports = {
     'eslint-comments/no-unused-enable': 'error',
     // 'eslint-comments/no-restricted-disable': project-specific
     'eslint-comments/no-use': ['error', { allow: ['eslint-disable-line', 'eslint-disable-next-line'] }],
+
+    // https://github.com/benmosher/eslint-plugin-import#rules (Static Analysis)
+
+    // 'import/no-unresolved': enforced by TypeScript
+    // 'import/named': enforced by TypeScript
+    // 'import/default': enforced by TypeScript
+    // 'import/namespace': enforced by TypeScript
+    // 'import/no-restricted-paths': project-specific
+    'import/no-absolute-path': 'error',
+    'import/no-dynamic-require': 'error',
+    'import/no-internal-modules': 'error',
+    // 'import/no-webpack-loader-syntax': project-specific
+    'import/no-self-import': 'error',
+
+    // https://github.com/benmosher/eslint-plugin-import#rules (Helpful Warnings)
+
+    // 'import/export': enforced by TypeScript
+    'import/no-named-as-default': 'error',
+    // 'import/no-named-as-default-member': enforced by TypeScript
+    'import/no-deprecated': 'error',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: false }],
+    'import/no-mutable-exports': 'error',
+
+    // https://github.com/benmosher/eslint-plugin-import#rules (Module Systems)
+
+    // 'import/unambiguous': project-specific
+    // 'import/no-commonjs': project-specific
+    // 'import/no-amd': project-specific
+    // 'import/no-nodejs-modules': project-specific
+
+    // https://github.com/benmosher/eslint-plugin-import#rules (Style Guide)
+
+    // # TODO: Until `import name = require('thing');` is supported
+    // 'import/first': 'error',
+    // 'import/exports-last': desirable for better grouping of concerns
+    'import/no-duplicates': 'error',
+    // 'import/no-namespace': desirable in many cases
+    'import/extensions': ['error', 'never'],
+    'import/order': [
+      'error',
+      {
+        groups: [['builtin', 'external'], ['internal'], ['parent'], ['sibling', 'index']],
+        'newlines-between': 'always',
+      },
+    ],
+    // 'import/newline-after-import': enforced by 'import/order'
+    // 'import/prefer-default-export': prefer named exports
+    // 'import/max-dependencies': project-specific
+    // 'import/no-unassigned-import': desirable for modules with side effects
+    'import/no-named-default': 'error',
+    'import/no-default-export': 'error',
+    // 'import/no-anonymous-default-export': not nuanced enough for global use
+    // 'import/group-exports': desirable for better grouping of concerns
+
+    // import/order: [error, {
+    //   groups: [[builtin, external], [internal], [parent], [sibling, index]],
+    //   newlines-between: always,
+    // }]
+    // import/no-default-export: error
 
     // https://github.com/nzakas/eslint-plugin-typescript#supported-rules
 

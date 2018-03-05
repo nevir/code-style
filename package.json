@@ -1,12 +1,11 @@
 {
   "name": "@nevir/code-style",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "nevir's code style",
   "license": "MIT",
   "author": "Ian MacLeod <ian@nevir.net>",
-  "main": "index.js",
-  "repository": "https://github.com/nevir/code-style",
   "files": [
+    "index.js",
     ".scripts/bootstrap.js",
     ".scripts/include",
     ".scripts/templates",
@@ -14,6 +13,8 @@
     "prettier",
     "typescript"
   ],
+  "main": "index.js",
+  "repository": "https://github.com/nevir/code-style",
   "scripts": {
     "fix-style": "./.scripts/templates/bootstrap/scripts/fix-style.sh",
     "prepare": "./.scripts/prepare.sh",

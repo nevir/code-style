@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "newLine": "lf",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,

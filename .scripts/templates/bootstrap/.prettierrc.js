@@ -1,1 +1,1 @@
-module.exports = require('@nevir/code-style/prettier/config.js');
+module.exports = require('@nevir/code-style').prettier;
