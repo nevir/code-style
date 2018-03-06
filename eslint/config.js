@@ -318,7 +318,7 @@ module.exports = {
     // 'eslint-comments/no-restricted-disable': project-specific
     'eslint-comments/no-use': ['error', { allow: ['eslint-disable-line', 'eslint-disable-next-line'] }],
 
-    // https://github.com/benmosher/eslint-plugin-import#rules (Static Analysis)
+    // https://github.com/benmosher/eslint-plugin-import#static-analysis
 
     // 'import/no-unresolved': enforced by TypeScript
     // 'import/named': enforced by TypeScript
@@ -331,7 +331,7 @@ module.exports = {
     // 'import/no-webpack-loader-syntax': project-specific
     'import/no-self-import': 'error',
 
-    // https://github.com/benmosher/eslint-plugin-import#rules (Helpful Warnings)
+    // https://github.com/benmosher/eslint-plugin-import#helpful-warnings
 
     // 'import/export': enforced by TypeScript
     'import/no-named-as-default': 'error',
@@ -340,14 +340,14 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: false }],
     'import/no-mutable-exports': 'error',
 
-    // https://github.com/benmosher/eslint-plugin-import#rules (Module Systems)
+    // https://github.com/benmosher/eslint-plugin-import#module-systems
 
     // 'import/unambiguous': project-specific
     // 'import/no-commonjs': project-specific
     // 'import/no-amd': project-specific
     // 'import/no-nodejs-modules': project-specific
 
-    // https://github.com/benmosher/eslint-plugin-import#rules (Style Guide)
+    // https://github.com/benmosher/eslint-plugin-import#style-guide
 
     // # TODO: Until `import name = require('thing');` is supported
     // 'import/first': 'error',
