@@ -1,5 +1,5 @@
-DEFAULT_ESLINT_EXTENSIONS=(js jsx mjs ts tsx)
-DEFAULT_PRETTIER_EXTENSIONS=(js jsx mjs ts tsx json md gql css less sass scss)
+DEFAULT_ESLINT_EXTENSIONS=(mjs ts tsx)
+DEFAULT_PRETTIER_EXTENSIONS=(mjs ts tsx json md gql css less sass scss)
 DEFAULT_TYPESCRIPT_EXTENSIONS=(ts tsx)
 
 # Set these variables before including globbing.sh if you wish to override the
