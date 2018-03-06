@@ -27,7 +27,7 @@ filter_extensions_for() {
   local extensions=($(extensions_for "$1"))
   for file in "${@:2}"; do
     for ext in "${extensions[@]}"; do
-      if [[ "${file}" =~ .${ext}$ ]]; then
+      if [[ "${file}" =~ /[^.].${ext}$ ]]; then
         echo "${file}"
       fi
     done
@@ -43,8 +43,8 @@ join_extensions_for() {
 FILES=("${@}")
 if [[ "${#FILES[@]}" = "0" ]]; then
   # TODO: Figure out how to ignore node_modules at any depth (e.g. for lerna).
-  ESLINT_FILES=("{,!(dist|node_modules)/**/}*.{$(join_extensions_for eslint)}")
-  PRETTIER_FILES=("{,!(dist|node_modules)/**/}*.{$(join_extensions_for prettier)}")
+  ESLINT_FILES=("{,!(dist|node_modules)/**/}!(*.*).{$(join_extensions_for eslint)}")
+  PRETTIER_FILES=("{,!(dist|node_modules)/**/}!(*.*).{$(join_extensions_for prettier)}")
 else
   ESLINT_FILES=($(filter_extensions_for eslint "${FILES[@]}"))
   PRETTIER_FILES=($(filter_extensions_for prettier "${FILES[@]}"))
