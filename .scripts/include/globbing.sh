@@ -1,6 +1,12 @@
-ESLINT_EXTENSIONS=(js jsx mjs ts tsx)
-PRETTIER_EXTENSIONS=(js jsx mjs ts tsx json md gql css less sass scss)
-TYPESCRIPT_EXTENSIONS=(ts tsx)
+DEFAULT_ESLINT_EXTENSIONS=(js jsx mjs ts tsx)
+DEFAULT_PRETTIER_EXTENSIONS=(js jsx mjs ts tsx json md gql css less sass scss)
+DEFAULT_TYPESCRIPT_EXTENSIONS=(ts tsx)
+
+# Set these variables before including globbing.sh if you wish to override the
+# file types each script runs for.
+ESLINT_EXTENSIONS=("${ESLINT_EXTENSIONS[@]:-${DEFAULT_ESLINT_EXTENSIONS[@]}}")
+PRETTIER_EXTENSIONS=("${PRETTIER_EXTENSIONS[@]:-${DEFAULT_PRETTIER_EXTENSIONS[@]}}")
+TYPESCRIPT_EXTENSIONS=("${TYPESCRIPT_EXTENSIONS[@]:-${DEFAULT_TYPESCRIPT_EXTENSIONS[@]}}")
 
 extensions_for() {
   local extensions
