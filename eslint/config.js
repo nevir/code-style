@@ -289,7 +289,7 @@ module.exports = {
     // 'no-new-symbol': enforced by TypeScript
     // 'no-this-before-super': enforced by TypeScript
     'no-useless-computed-key': 'error',
-    'no-useless-constructor': 'error',
+    // 'no-useless-constructor': doesn't work with constructor shorthands
     'no-useless-rename': 'error',
     'no-var': 'error',
     'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
