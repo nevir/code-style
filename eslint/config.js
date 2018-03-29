@@ -392,11 +392,13 @@ module.exports = {
     // 'typescript/no-empty-interface': desirable for identifying shapes
     // 'typescript/no-explicit-any': desirable in some cases
     // 'typescript/no-namespace': desirable for class augmentation
+    // 'typescript/no-non-null-assertion': desirable in some cases
     // 'typescript/no-parameter-properties': desirable for many cases
     'typescript/no-triple-slash-reference': 'error',
     'typescript/no-type-alias': ['error', { allowAliases: true, allowMappedTypes: true }],
     // 'typescript/no-unused-vars': enforced by TypeScript
     // 'typescript/no-use-before-define': enforced by TypeScript
+    'typescript/no-var-requires': 'error',
     'typescript/prefer-namespace-keyword': 'error',
     // 'typescript/type-annotation-spacing': enforced by Prettier
   },
