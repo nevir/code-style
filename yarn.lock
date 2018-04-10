@@ -256,14 +256,14 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-eslint-comments@^2.0.2:
+eslint-plugin-eslint-comments@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-2.0.2.tgz#006e1c834beffe6ff3014e84a3ae69acfa539a28"
   dependencies:
     escape-string-regexp "^1.0.5"
     ignore "^3.3.7"
 
-eslint-plugin-import@^2.9.0:
+eslint-plugin-import@~2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.9.0.tgz#26002efbfca5989b7288ac047508bd24f217b169"
   dependencies:
@@ -278,7 +278,7 @@ eslint-plugin-import@^2.9.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-typescript@^0.11.0:
+eslint-plugin-typescript@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-typescript/-/eslint-plugin-typescript-0.11.0.tgz#a8480beeac1634271737e0ff8af32d9119b0d272"
   dependencies:
@@ -295,7 +295,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.18.2:
+eslint@~4.18.2:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.18.2.tgz#0f81267ad1012e7d2051e186a9004cc2267b8d45"
   dependencies:
@@ -465,7 +465,7 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.5:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-greenkeeper-lockfile@^1.14.0:
+greenkeeper-lockfile@~1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/greenkeeper-lockfile/-/greenkeeper-lockfile-1.14.0.tgz#c6c25d62cd08fcd30ccdb5f11f171f7c80a1a7ce"
   dependencies:
@@ -804,7 +804,7 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
-prettier@^1.11.1:
+prettier@~1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.1.tgz#61e43fc4cd44e68f2b0dfc2c38cd4bb0fccdcc75"
 
@@ -1043,7 +1043,7 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@^14.0.0:
+typescript-eslint-parser@~14.0.0:
   version "14.0.0"
   resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-14.0.0.tgz#c90a8f541c1d96e5c55e2807c61d154e788520f9"
   dependencies:
