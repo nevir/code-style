@@ -369,6 +369,7 @@ module.exports = {
     'import/no-named-default': 'error',
     'import/no-default-export': 'error',
     // 'import/no-anonymous-default-export': not nuanced enough for global use
+    'import/no-cycle': 'error',
     // 'import/group-exports': desirable for better grouping of concerns
 
     // import/order: [error, {
