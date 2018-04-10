@@ -28,6 +28,8 @@ jobs:
             - deps-
       - run: if [[ "${CIRCLE_BRANCH}" =~ ^greenkeeper/ ]]; then yarn install; else yarn install --frozen-lockfile; fi
       - run: ./node_modules/.bin/greenkeeper-lockfile-update
+      # https://github.com/greenkeeperio/greenkeeper-lockfile/issues/136
+      - run: ./node_modules/.bin/greenkeeper-lockfile-upload
       - save_cache:
           key: deps-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
           paths:
@@ -51,12 +53,6 @@ jobs:
       - <<: *restore
       - run: circleci tests glob ".test/*.sh" | circleci tests split --split-by=filesize | xargs /usr/bin/env
       - <<: *store_artifacts
-
-  greenkeeper:
-    <<: *job_common
-    steps:
-      - <<: *restore
-      - run: ./node_modules/.bin/greenkeeper-lockfile-upload
 
   release:
     <<: *job_common
@@ -82,10 +78,6 @@ workflows:
       - test-integration:
           requires:
             - build
-      - greenkeeper:
-          requires:
-            - test-style
-            - test-integration
       - release:
           requires:
             - test-style
