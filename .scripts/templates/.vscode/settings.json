@@ -14,5 +14,10 @@
       "language": "typescriptreact",
       "autoFix": true
     }
-  ]
+  ],
+  "files.exclude": {
+    "**/*.js": true,
+    "**/*.js.map": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
