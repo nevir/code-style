@@ -19,8 +19,8 @@
   ],
   "files.exclude": {
     "node_modules": true,
-    "**/*.js": true,
-    "**/*.js.map": true
+    "{src,test}/**/*.js.map": true,
+    "{src,test}/**/*.js": true
   },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
