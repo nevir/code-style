@@ -392,6 +392,7 @@ module.exports = {
     // 'typescript/no-array-constructor': enforced by 'no-array-constructor'
     // 'typescript/no-empty-interface': desirable for identifying shapes
     // 'typescript/no-explicit-any': desirable in some cases
+    'typescript/no-inferrable-types': 'error',
     // 'typescript/no-namespace': desirable for class augmentation
     // 'typescript/no-non-null-assertion': desirable in some cases
     // 'typescript/no-parameter-properties': desirable for many cases
